@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AETHERION</title>
+    <script src="https://cdn.tailwindcss.com"></script>*
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&family=Lexend:wght@100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./../css/slider.css">
+</head>
+
+<body class="bg-cover bg-center min-h-screen" style="background-image: url('./../image/background.jpeg');">
+    <header
+        class="flex justify-between items-center px-10 py-4 bg-black bg-opacity-60 border-b border-indigo-700 shadow-lg font-[Irish]">
+        <h1 class="text-yellow-400 font-bold text-2xl tracking-wide">AETHERION</h1>
+
+        <button id="burger-menu" class="lg:hidden text-yellow-300 text-3xl focus:outline-none">
+        &#9776;
+        </button>
+    </header>
+    <main>
+        <div class="overflow-hidden w-full mt-12 ">
+            <div class="flex w-[200%] animate-slide gap-3">
+                <!-- First set -->
+                <div class="flex justify-center gap-10 w-[50%] ml-24">
+                    <img src="./../image/king.jpeg" alt="card 1" class="w-36">
+                    <img src="./../image/queen.jpeg" alt="card 2" class="w-36">
+                    <img src="./../image/monster-card.jpeg" alt="card 3" class="w-36 mr-12">
+                </div>
+
+                <!-- Duplicate set for smooth loop -->
+                <div class="flex justify-center gap-10 w-[50%] ml-24">
+                    <img src="./../image/king.jpeg" alt="card 1" class="w-36">
+                    <img src="./../image/queen.jpeg" alt="card 2" class="w-36">
+                    <img src="./../image/monster-card.jpeg" alt="card 3" class="w-36">
+                </div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-2 gap-[300px] ml-10">
+            <div class="w-[500px] text-white h-[300px] bg-gray-400/70 ml-2 mt-12 py-10 pl-4 font-[Irish] rounded-2xl ">
+                <h2 class="text-2xl font-bold mb-4 text-black text-center">How you can play</h2>
+                <p class="flex-1">to play you need too have cards and fight with your cards with someone
+                    by putting one card in every round. The two players will start with points — whoever loses all
+                    their points first will lose, and the winner will take a card from the loser. Rules? No rules.
+                    Play with your brain.</p>
+            </div>
+            <div class="text-white bg-gray-400/70 w-[500px] mr-12 h-auto p-5 rounded-2xl mt-12 py-8 pl-4 font-[Irish] overflow-hidden">
+                <h2 class="text-2xl font-bold mb-4 text-black text-center">FAQ</h2>
+
+                <details class="mb-3">
+                    <summary class="cursor-pointer font-semibold hover:text-lime-300">1. How do I start playing?
+                    </summary>
+                    <p class="mt-2 text-gray-200">You just need to collect your first cards and start a battle with
+                        another player. Each round, you both choose one card to fight.</p>
+                </details>
+
+                <details class="mb-3">
+                    <summary class="cursor-pointer font-semibold hover:text-lime-300">2. How do I win a match?</summary>
+                    <p class="mt-2 text-gray-200">The goal is to make your opponent lose all their points. The player
+                        who reaches zero points loses, and the winner takes one of their cards.</p>
+                </details>
+
+                <details class="mb-3">
+                    <summary class="cursor-pointer font-semibold hover:text-lime-300">3. Can I trade my cards?</summary>
+                    <p class="mt-2 text-gray-200">Yes, you can trade your cards with other players in the marketplace to
+                        improve your deck and strategy.</p>
+                </details>
+
+                <details class="mb-3">
+                    <summary class="cursor-pointer font-semibold hover:text-lime-300">4. Are there any rules or limits?
+                    </summary>
+                    <p class="mt-2 text-gray-200">There are no fixed rules — the only rule is to play smart and use your
+                        cards wisely!</p>
+                </details>
+
+                <details class="mb-3">
+                    <summary class="cursor-pointer font-semibold hover:text-lime-300">5. Can I upgrade my cards?
+                    </summary>
+                    <p class="mt-2 text-gray-200">Some special cards can be upgraded or evolved through victories in
+                        battles or by collecting special items.</p>
+                </details>
+            </div>
+
+        </div>
+    </main>
+
+
+
+    <footer>
+       
+    </footer>
+
+    </main>
+    <script src="./../js/script.js"></script>
+</body>
+
+</html>
