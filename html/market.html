@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AETHERION | Market</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="bg-cover bg-center min-h-screen relative font-[Irish]" 
+      style="background-image: url('./../image/background.jpeg'); ">
+
+  <header class="flex justify-between items-center px-10 py-4 bg-black bg-opacity-60 border-b border-indigo-700 shadow-lg gap-10 font-[Irish]">
+    <h1 class="text-yellow-400 font-bold text-2xl tracking-wide">AETHERION</h1>
+        <button id="burger-menu" class="lg:hidden text-yellow-300 text-3xl focus:outline-none">
+         &#9776;
+        </button>
+  </header>
+
+
+  <div id="panier-popup" 
+       class="hidden fixed top-20 right-4 bg-black bg-opacity-80 border border-yellow-400 rounded-2xl shadow-xl w-80 p-4 text-white z-50 overflow-y-auto max-h-[500px]">
+    <h3 class="text-yellow-300 text-xl font-bold mb-3">Your Shop</h3>
+
+    <div id="my-card-container" class="space-y-3">
+     
+    </div>
+  </div>
+
+
+  <main class="px-12 py-10 bg-black bg-opacity-40 min-h-screen">
+    <div class="flex justify-between items-center mb-6">
+      <select id="category" name="category" 
+        class="bg-black bg-opacity-60 text-yellow-300 border border-yellow-400 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-400">
+        <option value="all">All</option>
+        <option value="Mythic">Mythic</option>
+        <option value="Legendary">Legendary</option>
+        <option value="Epic">Epic</option>
+        <option value="Rare">Rare</option>
+        <option value="Common">Common</option>
+      </select>
+
+      <h2 class="text-white text-xl font-semibold tracking-wide">Aetherion Market</h2>
+    </div>
+
+    <div id="card-container" class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-10 ml-10">
+    
+    </div>
+
+    <div class="flex justify-center gap-8 text-white mt-16">
+      <a href="#"><button class="border border-black p-4 bg-orange-600 px-6 rounded-2xl">1</button></a>
+      <a href="#"><button class="border border-black p-4 bg-orange-600 px-6 rounded-2xl">2</button></a>
+      <a href="#"><button class="border border-black p-4 bg-orange-600 px-6 rounded-2xl">3</button></a>
+    </div> 
+  </main>
+
+  <footer>
+    
+  </footer>
+
+  <script src="./../js/script.js"></script>
+</body>
+</html>
