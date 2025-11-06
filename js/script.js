@@ -232,10 +232,10 @@ let footer = document.querySelector("footer");
 
       <nav class="space-x-8 text-yellow-200 mr-16 pt-4 hidden md:block">
         <ul class="flex flex-wrap justify-between gap-10">
-          <li><a href="index.html" class="hover:text-indigo-400 font-[Irish]">Home</a></li>
-          <li><a href="guide.html" class="hover:text-indigo-400 font-[Irish]">Guide</a></li>
-          <li><a href="market.html" class="hover:text-indigo-400 font-[Irish]">Market</a></li>
-          <li><a href="#" class="hover:text-indigo-400 font-[Irish]">My Deck</a></li>
+          <li><a href="./index.html" class="hover:text-indigo-400 font-[Irish]">Home</a></li>
+          <li><a href="./guide.html" class="hover:text-indigo-400 font-[Irish]">Guide</a></li>
+          <li><a href="./market.html" class="hover:text-indigo-400 font-[Irish]">Market</a></li>
+          <li><a href="./myDeck" class="hover:text-indigo-400 font-[Irish]">My Deck</a></li>
           <li><a href="favourite.html" class="hover:text-indigo-400 font-[Irish]">Favourite</a></li>
           <li><a href="#" class="hover:text-indigo-400 font-[Irish]">Card</a></li>
           <li><a href="#" class="hover:text-indigo-400 font-[Irish]">Contact us</a></li>
