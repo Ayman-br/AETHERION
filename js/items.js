@@ -1,4 +1,4 @@
-// ✅ Must be outside DOMContentLoaded
+
 const script = document.currentScript || document.querySelector('script[src*="items.js"]');
 const params = new URLSearchParams(script.src.split('?')[1]);
 const item = params.get('item');
@@ -6,7 +6,7 @@ const item = params.get('item');
 document.addEventListener('DOMContentLoaded', () => {
   console.log(`item: ${item}`);
 
-  // Get cards safely
+  
   const stored = localStorage.getItem(item);
   const cards = stored ? JSON.parse(stored) : [];
 
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     return;
   }
 
-  // Determine which container to use
+  
   const containerName = item === "myDeck" ? "deck-container" : "favorite-container";
   const container = document.getElementById(containerName);
 
@@ -53,12 +53,12 @@ document.addEventListener('DOMContentLoaded', () => {
       `;
     }
 
-    cardHTML += `</div>`; // close main div
+    cardHTML += `</div>`; 
 
     container.innerHTML += cardHTML;
   });
 
-  // Add the "+" card only for myDeck
+  
   if (item === "myDeck") {
     container.innerHTML += `
       <div class="flex justify-center items-center bg-gray-400/70 w-full h-[350px] m-4 rounded-xl h-[450px]">
@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 const favouriteContainer = document.getElementById("favourite-container");
 
- // Load favourite cards
+ 
         let favouriteCards = JSON.parse(localStorage.getItem("userFavouriteCards")) || [];
         let panierCards = JSON.parse(localStorage.getItem("usercards")) || [];
 
@@ -92,7 +92,7 @@ const favouriteContainer = document.getElementById("favourite-container");
             alert(`${card.name} added to your panier 🛒`);
         }
 
-        // Remove from favourites
+        
         function removeFromFavourite(id) {
             favouriteCards = favouriteCards.filter(c => c.id !== id);
             localStorage.setItem("userFavouriteCards", JSON.stringify(favouriteCards));
@@ -100,7 +100,7 @@ const favouriteContainer = document.getElementById("favourite-container");
             alert("Removed from favourites ");
         }
 
-        // Initial render
+       
         renderFavourites();
 
 

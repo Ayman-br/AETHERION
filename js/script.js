@@ -247,16 +247,15 @@ let footer = document.querySelector("footer");
   `;
 
   
-  // Get references to the burger button and nav menu
   const burger = document.getElementById('burger-menu');
   const navMenu = document.getElementById('nav-menu');
 console.log("1");
-  // Toggle the menu when burger is clicked
+ 
   burger.addEventListener('click', () => {
     navMenu.classList.toggle('hidden');
   });
 console.log("2")
-  // Optional: Close menu when a link is clicked (mobile)
+  
   const navLinks = navMenu.querySelectorAll('a');
   navLinks.forEach(link => {
     link.addEventListener('click', () => {
@@ -271,7 +270,7 @@ console.log("before burger")
 
   console.log("i'm before render");
 
-// Render Cards
+
 function renderCard(data, isFiltred = false) {
   if (isFiltred) cardContainer.innerHTML = '';
 
@@ -311,7 +310,7 @@ cardCategory.addEventListener('change', () => {
 renderCard(cardsData);
 
 console.log("before setup")
-// Panier & Favourite Buttons
+
 function setupButtons() {
   let payButton = document.querySelectorAll('.panier-button');
   let favouriteButton = document.querySelectorAll('.favourite-button');
@@ -342,7 +341,7 @@ function setupButtons() {
   });
 }
 console.log("before the panier")
-// Panier Popup
+
 const popup = document.getElementById('panier-popup');
 const panierButton = document.getElementById('card-button');
 
@@ -352,7 +351,7 @@ panierButton.addEventListener('click', () => {
   renderMyCard();
 });
 
-// Render Cart
+
 function renderMyCard() {
   const myCard = JSON.parse(localStorage.getItem('usercards')) || [];
   popup.innerHTML = `
