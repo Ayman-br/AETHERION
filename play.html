@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aetherion Play Zone</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&family=Lexend:wght@100..900&display=swap"
+        rel="stylesheet">
+        <style>
+            .player-card.drop-over { outline: 2px dashed rgba(255,255,255,0.6); background-color: rgba(255,255,255,0.02); }
+.handCard.dragging { opacity: 0.6; transform: scale(0.98); transition: transform 120ms; }
+.player-card .text-white\/50 { pointer-events: none; }
+
+        </style>
+</head>
+
+<body class="bg-cover bg-center min-h-screen" style="background-image: url('./../image/background.jpeg');">
+    <header
+        class="flex justify-between items-center px-10 py-4 bg-black bg-opacity-60 border-b border-indigo-700 shadow-lg font-[Irish]">
+        <h1 class="text-yellow-400 font-bold text-2xl tracking-wide">AETHERION</h1>
+
+        <button id="burger-menu" class="lg:hidden text-yellow-300 text-3xl focus:outline-none">
+            &#9776;
+        </button>
+    </header>
+    <div class="flex ">
+
+        <aside id="deck-play-continer"
+            class="w-[15%] h-auto ml-2 mt-0 overflow-y-auto overflow-x-hidden hide-scrollbar p-4 bg-black/40 rounded-md">
+            <h3 class="text-yellow-400 font-bold mb-4">My Collection</h3>
+
+
+            <button id="draw-five-btn"
+                class="w-full bg-orange-600 hover:bg-orange-500 text-white font-bold py-3 px-4 rounded-lg shadow-md mb-3">
+                Draw 5 to Hand
+            </button>
+            <div id="deck-info" class="text-white text-sm mb-4">
+                Deck: <span id="deck-count">0</span> cards
+            </div>
+            <div id="deck-list" class="text-white text-sm text-left overflow-auto max-h-[600px]"></div>
+        </aside>
+
+
+
+
+        <section
+            class="w-[65%] mx-auto mt-0 h-[560px] bg-black/70 grid grid-rows-[1fr_auto_1fr] gap-8 p-6 rounded-lg font-[Irish]">
+
+            <div id="random-container" class="grid grid-cols-5 gap-6 w-full h-[90%] justify-items-center">
+
+                <div
+                    class="w-40 h-[200px] border-2 border-dashed border-white/40 rounded-lg flex items-center justify-center text-white/50 text-sm">
+                    Empty</div>
+                <div
+                    class="w-40 h-[200px] border-2 border-dashed border-white/40 rounded-lg flex items-center justify-center text-white/50 text-sm">
+                    Empty</div>
+                <div
+                    class="w-40 h-[200px] border-2 border-dashed border-white/40 rounded-lg flex items-center justify-center text-white/50 text-sm">
+                    Empty</div>
+                    <div
+                    class="w-40 h-[200px] border-2 border-dashed border-white/40 rounded-lg flex items-center justify-center text-white/50 text-sm">
+                    Empty</div>
+                <div
+                    class="w-40 h-[200px] border-2 border-dashed border-white/40 rounded-lg flex items-center justify-center text-white/50 text-sm">
+                    Empty</div>
+            </div>
+
+
+            <div class="flex justify-center items-center">
+                <button id="end-turn-btn"
+                    class=" h-[50px] bg-orange-600 hover:bg-orange-500 text-white font-bold py-3 px-8 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-200">
+                    End Turn
+                </button>
+            </div>
+
+            <div id="player-container" class="grid grid-cols-5 gap-6 w-full h-[90%] justify-items-center">
+                <div
+                    class="player-card w-40 h-[200px] border-2 border-dashed border-white/40 rounded-lg flex items-center justify-center text-white/50 text-sm">
+                    Empty</div>
+                <div
+                    class="player-card w-40 h-[200px] border-2 border-dashed border-white/40 rounded-lg flex items-center justify-center text-white/50 text-sm">
+                    Empty</div>
+                <div
+                    class="player-card w-40 h-[200px] border-2 border-dashed border-white/40 rounded-lg flex items-center justify-center text-white/50 text-sm">
+                    Empty</div>
+                <div
+                    class="player-card w-40 h-[200px] border-2 border-dashed border-white/40 rounded-lg flex items-center justify-center text-white/50 text-sm">
+                    Empty</div>
+                <div
+                    class="player-card w-40 h-[200px] border-2 border-dashed border-white/40 rounded-lg flex items-center justify-center text-white/50 text-sm">
+                    Empty</div>
+            </div>
+
+        </section>
+
+
+    </div>
+    <div id="hand-cards"
+        class="grid grid-cols-5 gap-6 w-[77%] mx-auto mt-2 h-auto bg-gray-900/90  gap-10 p-4 rounded-lg font-[Irish] ml-[310px] pb-8 mr-12">
+        <div class="handCard w-40 h-40 border-2 border-dashed border-white/40 rounded-lg flex items-center justify-center text-white/50 text-sm"
+            draggable="true">
+            Empty
+        </div>
+        <div class="handCard w-40 h-40 border-2 border-dashed border-white/40 rounded-lg flex items-center justify-center text-white/50 text-sm"
+            draggable="true">
+            Empty
+        </div>
+        <div class="handCard w-40 h-40 border-2 border-dashed border-white/40 rounded-lg flex items-center justify-center text-white/50 text-sm"
+            draggable="true">
+            Empty
+        </div>
+        <div class="handCard w-40 h-40 border-2 border-dashed border-white/40 rounded-lg flex items-center justify-center text-white/50 text-sm"
+            draggable="true">
+            Empty
+        </div>
+        <div class="handCard w-40 h-40 border-2 border-dashed border-white/40 rounded-lg flex items-center justify-center text-white/50 text-sm"
+            draggable="true">
+            Empty
+        </div>
+
+    </div>
+</body>
+<script src="js/play.js"></script>
+<script src="js/script.js"></script>
+
+</html>
