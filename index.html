@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AETHERION</title>
+    <script src="https://cdn.tailwindcss.com"></script>*
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Irish+Grover&family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body class="bg-cover bg-center min-h-screen" 
+        style="background-image: url('./../image/background.jpeg');">
+    <header class="flex justify-between items-center px-10 py-4 bg-black bg-opacity-60 border-b border-indigo-700 shadow-lg gap-10 font-[Irish]">
+        <h1 class="text-yellow-400 font-bold text-2xl tracking-wide">AETHERION</h1>
+
+        <button id="burger-menu" class="md:hidden text-yellow-300 text-3xl focus:outline-none">
+        &#9776;
+        </button>
+    </header>
+    <main class="grid min-h-screen">
+    <div class="place-self-center text-center">
+    <h1 class="text-3xl font-bold mb-2 text-white font-[Irish]">Enter The World Of AETHERION</h1>
+    <p class="text-lg font-bold mb-2 text-yellow-400 font-[Irish] mt-12">Collect, trade, and battle with powerful cards</p>
+    <div class="flex justify-center gap-14">
+        <a href="./market.html"><button class="bg-green-800 text-white font-[Irish] border border-black border-solid px-12 py-3 mt-28 rounded-[6px]">sale now</button></a>
+        <a href="./guide.html"><button class="bg-blue-800 text-white font-[Irish] border border-black border-solid px-10 py-3 mt-28 rounded-[6px]">know more</button></a>
+    </div>
+    </div>
+    <div id="card-container"
+        class="grid grid-cols-2 gap-10 justify-center items-end place-self-center self-end mb-5">
+        <img src="./../image/queen.jpeg" alt="Queen" class="w-36 h-auto rotate-6">
+        <img src="./../image/king.jpeg" alt="King Aymar" class="w-36 h-auto -rotate-6">
+    </div>
+</main>
+<footer>
+</footer>
+
+    </main>
+    <script src="./../js/script.js"></script>
+</body>
+</html>
